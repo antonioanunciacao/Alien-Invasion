@@ -1,4 +1,4 @@
-import pygames
+import pygame
 from pygame.sprite import Sprite
 
 class Bullet(Sprite):
@@ -10,7 +10,7 @@ class Bullet(Sprite):
 		self.screen = screen
 		
 		# Cria um retângulo para o projétil em (0,0) e, em seguida defina a posição correta
-		self.rect = pygame.rect(0, 0, ai_settings.bullet_width, ai_settings.bullet_height)
+		self.rect = pygame.Rect(0, 0, ai_settings.bullet_width, ai_settings.bullet_height)
 		self.rect.centerx = ship.rect.centerx
 		self.rect.top = ship.rect.top
 		
